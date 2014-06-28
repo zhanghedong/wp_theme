@@ -1,0 +1,484 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 14px;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background: #fff;
+    color: #747f8c;
+    font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #4f4f4f;
+    text-decoration: none;
+    &:hover {
+        color: #222;
+    }
+}
+
+.clearfix {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.full-wrap {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #BE0000;
+    height: 110px;
+    h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 70px;
+        height: 70px;
+        text-indent: 40px;
+        color: #fff;
+    }
+    .menu {
+        height: 40px;
+        font-size: 14px;
+        background-color: #8A0B00;
+        a {
+            color: #fff;
+            display: inline-block;
+            width: 120px;
+            line-height: 40px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            &.active {
+                background-color: #5B0000;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+
+.lotto-list {
+    margin-top: 40px;
+    min-height: 300px;
+    ul {
+        li {
+            background-color: #fff;
+            float: left;
+            width: 220px;
+            height: 92px;
+            margin: 0 20px 20px 0;
+            position: relative;
+            overflow: hidden;
+            .lotto-wrap {
+                border: 1px solid #ddd;
+                height: 90px;
+                overflow: hidden;
+                &:hover {
+                    border: 1px solid #BE0000;
+                }
+                .sub {
+                    padding: 4px 10px;
+                    width: 198px;
+                    height: 82px;
+                    overflow: hidden;
+                    .icon {
+                        width: 63px;
+                        height: 64px;
+                        margin-top: 9px;
+                    }
+                    .info {
+                        margin: -68px 0 0 80px;
+                        line-height: 18px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        font-size: 12px;
+                        .type {
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 28px;
+                        }
+                        .grey {
+                            color: #888;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-menu {
+    margin-top: 100px;
+    background-color: #F5F5F5;
+    height: 160px;
+    h2 {
+        text-indent: -9999px;
+        float: left;
+        width: 256px;
+        height: 156px;
+        background: url(../resource/safe.png) no-repeat;
+    }
+    ul {
+        float: left;
+        li {
+            float: left;
+            padding: 20px 0 0 40px;
+            width: 132px;
+            height: 136px;
+            line-height: 1.7;
+            color: #6e6e6e;
+            dt {
+                font-weight: 700;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+.lotto-detail {
+    .content {
+        padding-top: 20px;
+        width: 710px;
+        .lotto-title {
+            position: relative;
+            height: 80px;
+            margin-bottom: 10px;
+            p {
+                position: absolute;
+                color: #fff;
+                top: 48px;
+                padding-left: 117px;
+                em {
+                    font-style: normal;
+                    color: #56FFFD;
+                    margin: auto 5px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .lotto-select {
+            margin-top: 20px;
+            h4 {
+                font-size: 16px;
+                background-color: #FFF4F1;
+                padding: 20px;
+                .countdown {
+                    font-size: 12px;
+                    color: #888;
+                    margin-left: 40px;
+                    em {
+                        color: #f60;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .select-type {
+                padding: 12px;
+                .type-check {
+                    margin-right: 10px;
+                }
+            }
+            .desc {
+                border-top: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+                font-size: 12px;
+                padding: 12px;
+                color: #888;
+                background-color: #F2F2F2;
+            }
+            .step {
+                border: 1px solid #FFC3B3;
+                border-top: 0;
+            }
+            .select-area {
+                padding-top: 20px;
+                .select-row {
+                    .indicate {
+                        margin-left: 23px;
+                        float: left;
+                        width: 86px;
+                        padding-top: 7px;
+                        .cp-digit {
+                            display: block;
+                            height: 23px;
+                            width: 60px;
+                            font-weight: 700;
+                            background-color: #F2F2F2;
+                            color: #808080;
+                            padding-left: 12px;
+                            line-height: 1.9;
+                        }
+                        .cp-tip {
+                            color: #D9D9D9;
+                            border-bottom: 1px dashed #D9D9D9;
+                            margin-left: 3px;
+                        }
+                    }
+                    .select-main {
+                        width: 372px;
+                        border-right: 1px solid #EDEDED;
+                        float: left;
+                    }
+                }
+            }
+            .balls {
+                li {
+                    float: left;
+                    width: 26px;
+                    height: 44px;
+                    margin-right: 9px;
+                    margin-top: 5px;
+                    span {
+                        font-weight: bold;
+                        font-family: arial;
+                        font-size: 14px;
+                        line-height: 25px;
+                        text-align: center;
+                        background: url('../resource/ball.png') no-repeat 0 0;
+                        display: block;
+                        width: 100%;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+                    em {
+                        font-style: normal;
+                        text-align: center;
+                        width: 100%;
+                        color: #BFBFBF;
+                        display: block;
+                    }
+                }
+            }
+            .help {
+                float: left;
+                padding: 8px 0 0 15px;
+                input {
+                    cursor: pointer;
+                }
+            }
+        }
+        .select-option {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #FFF4F1;
+            .select-tip {
+                line-height: 32px;
+                .money {
+                    color: #f60;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.reward {
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 10px;
+    h2 {
+        padding: 30px 0 10px 0;
+        font-size: 16px;
+    }
+}
+
+.tab {
+    background-color: #FF3636;
+    height: 42px;
+    border: 1px solid #C21E1D;
+    border-bottom: 0;
+    position: relative;
+    a {
+        float: left;
+        color: #fff;
+        margin: 10px 12px 0px;
+        line-height: 32px;
+        padding: 0 15px;
+        display: inline-block;
+        vertical-align: bottom;
+        &.active {
+            background-color: #fff;
+            color: #555;
+        }
+    }
+}
+
+table {
+    empty-cells: show;
+    border-collapse: collapse;
+    border: solid #E6E6E6;
+    border-width: 0 1px 0 1px;
+    width: 100%;
+    th {
+        height: 28px;
+        line-height: 28px;
+        background: #f6f6f6;
+        font-weight: normal;
+        border: solid #e6e6e6;
+        border-width: 1px 0 0 1px;
+    }
+    td {
+        border: solid #e6e6e6;
+        border-width: 1px 0 0 1px;
+        line-height: 24px;
+        padding-left: 10px;
+        font-size: 12px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    font-weight: 700;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    &:hover {
+        background-color: #2D6BA1;
+    }
+}
+
+.btn-org {
+    cursor: pointer;
+    padding: 2px 4px;
+    border: 1px solid #DDA541;
+    color: #222;
+    background-color: #FFECC9;
+    &:hover {
+        background-color: #FFF4F4;
+    }
+}
+
+.btn-clear {
+    cursor: pointer;
+    padding: 2px 4px;
+    border: 1px solid #ddd;
+    color: #222;
+    background-color: #EFEFEF;
+    &:hover {
+        background-color: #F6F6F6;
+    }
+}
+.btn-delete{
+    cursor: pointer;
+   a{
+       color:#f60
+   }
+}
+.step-2{
+    background-color: #fff4f1;
+}
+.selected-wrap {
+    position: relative;
+    height: 180px;
+    padding:20px;
+    .selected-list{
+        float:left;
+        width:480px;
+        height: 150px;
+        padding:10px;
+        border:1px solid #ddd;
+        background-color: #fff;
+        margin-right: 10px;
+        .sp-4{
+            display: inline-block;
+            width:135px;
+        }
+        .sp-2{
+            display: inline-block;
+            width:50px
+        }
+    }
+    .select-random{
+        float:left;
+        width:120px;
+        .btn-clear{
+            margin-top: 58px;
+            width:80px;
+        }
+        .btn-org{
+            width:80px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.ml-30{
+    margin-left: 30px;
+}
+.notice{
+    padding:10px;
+    background-color: #fff;
+    border:1px solid #ffc3b3;
+}
+.tip{
+    color:#888
+}
+.selected-tip{
+    padding:10px 20px;
+    em{
+        color:#f60;
+        font-style: normal;
+    }
+}
+.selected-option{
+    text-align: center;
+    padding:20px 0;
+}
+.add-on{
+    .is-add,.add-setting{
+        padding:8px 0;
+    }
+    .add-setting{
+        padding-left:15px
+    }
+    table{
+        td{
+            text-align: center;
+            padding:0;
+            background-color: #fff;
+        }
+        border-bottom:1px solid #e6e6e6
+    }
+}
+.ipt{
+    &.ipt-s{
+        width:80px;
+    }
+}
