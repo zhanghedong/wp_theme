@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #747f8c;
+  -ms-word-break: break-all;
+      word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+  background: #fff;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background-color: #B42619;
+}
+
+.page-header .logo {
+  font-weight: 700;
+  line-height: 80px;
+  text-indent: 50px;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 80px;
+  background-color: #fbfbfb;
+}
+
+.page-container .main-view {
+  padding-left: 200px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  float: left;
+  width: 200px;
+  height: auto;
+  background-color: #F7F7F7;
+  border-right: 1px solid #dddddd;
+}
+
+.sidebar .main-nav {
+  margin-top: 50px;
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar .main-nav ul {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.sidebar .main-nav ul li {
+  height: 36px;
+  font-size: 14px;
+  line-height: 36px;
+  cursor: pointer;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #fff;
+}
+
+.sidebar .main-nav ul li a {
+  display: block;
+  height: 36px;
+}
+
+.sidebar .main-nav ul li a:hover {
+  text-decoration: none;
+}
+
+.sidebar .main-nav ul li:hover {
+  background-color: #fff;
+}
+
+.container {
+  width: 100% !important;
+}
+
+.module-header {
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-bc {
+  margin-top: 30px;
+}
+
+.table-bc thead tr th {
+  color: #888;
+  background-color: #efefef;
+}
+
+.table-bc tbody tr td {
+  background-color: #fff;
+}
+
+.lucky-alert {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000000;
+  width: 100%;
+}
+
+.lucky-alert div {
+  text-align: center;
+}
+
+.add-group-form {
+  padding: 15px 0;
+}
+
+.lotto-group-list .glyphicon {
+  position: absolute;
+  top: 13px;
+  right: 5px;
+  visibility: hidden;
+}
+
+.lotto-group-list .glyphicon-edit {
+  right: 30px;
+}
+
+.lotto-group-list a {
+  cursor: pointer;
+}
+
+.lotto-group-list a:hover .glyphicon {
+  visibility: visible;
+}

@@ -1,0 +1,76 @@
+<div>
+    <div class="module-header row">
+        <h2>游戏分组管理&nbsp;&nbsp;&nbsp;&nbsp; <button class="btn btn-sm btn-primary" type="button" ng-click="modifyItem()">创建分组</button></h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-bc">
+                    <thead>
+                    <tr>
+                        <!--<th>#</th>-->
+                        <th>分组名称</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in list">
+                        <td>{{item.name}}</td>
+                        <td>
+                            <button class="btn btn-link" ng-click="modifyItem(item)">修改</button>
+                            <button class="btn btn-link" ng-click="deleteItem(item)">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination-wrap text-center">
+                    <pagination boundary-links="true" total-items="totalItems" ng-model="currentPage"
+                                class="pagination-sm" ng-change="pageChanged()" previous-text="&lsaquo;"
+                                next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="deleteModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">删除分组</h3>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-danger alert-dismissable clearfix">
+                <div><span>确认删除“{{deleteItem.name}}”信息。</span></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="confirmDeleteItem(deleteItem)">确认删除</button>
+            <button class="btn btn-warning" ng-click="cancel()">取消</button>
+        </div>
+    </script>
+    <script type="text/ng-template" id="modifyModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">{{modifyFormTitle}}</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="input3" class="col-sm-3 control-label">分组名称</label>
+
+                    <div class="col-sm-9">
+
+                        <input type="text" class="form-control" ng-required="true" popover="分组名称不能为空!"
+                               popover-trigger="focus"  ng-model="modifyItem.name"
+                               id="input3">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary" ng-click="confirmModifyItem(modifyItem)">确认修改
+                        </button>
+                        <button class="btn btn-warning" ng-click="cancel()">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </script>
+</div>

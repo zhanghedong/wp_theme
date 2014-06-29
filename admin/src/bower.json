@@ -1,0 +1,27 @@
+{
+    "name": "?",
+    "version": "0.0.1",
+    "authors": [
+        "1625 <zhanghedong@gmail.com>"
+    ],
+    "description": "lucky",
+    "main": "?",
+    "keywords": [
+        "lucky"
+    ],
+    "license": "MIT",
+    "homepage": "http://willsongroup.com",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "libs",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular-bootstrap":null,
+        "bootstrap":null,
+        "angular-route":null,
+        "angular-resource":null
+    }
+}

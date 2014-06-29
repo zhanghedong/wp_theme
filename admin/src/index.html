@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html  ng-app="app" ng-controller="AppCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>后台管理</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-resource/angular-resource.min.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!--<script src="libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>-->
+    <!--module-->
+    <script src="app/common/alert.js"></script>
+    <script src="app/resource/resource.js"></script>
+    <script src="app/resource/services.js"></script>
+    <script src="app/welcome/welcome.js"></script>
+    <script src="app/side/side.js"></script>
+    <script src="app/user/user.js"></script>
+    <script src="app/order/order.js"></script>
+    <script src="app/lottogroup/lottogroup.js"></script>
+    <script src="app/lotto/lotto.js"></script>
+    <script src="app/method/method.js"></script>
+    <script src="app/header/header.js"></script>
+    <script src="app/bank/bank.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body>
+<div class="page-header">
+    <h1 class="logo">LOGO</h1>
+</div>
+<div class="page-container">
+    <div class="main-view">
+        <div class="sidebar" ng-controller="sideCtrl">
+            <div class="personal">
+
+            </div>
+            <div id="main_nav" class="main-nav">
+                <ul>
+                    <li  ng-class="{active:selectedItem == $index}"  ng-click="process.onClick($index)" ng-repeat="item in sides"><a ng-href="{{item.href}}" title="{{item.title}}" class="{{item.cls}}">{{item.text}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div>
+</div>
+<div  class="lucky-alert">
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{alert.msg}}</alert>
+</div>
+</body>
+</html>

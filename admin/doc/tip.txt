@@ -1,0 +1,8 @@
+demo:  http://imstillreallybored.com/2013/08/setting-up-a-require-js-and-backbone-js-project-quickly-with-bower/
+
+后台测试：
+修改app.js
+constant('LuckyConfig', {
+    apiUrl: 'http://d.com/bc/server/'
+
+apiUrl为你本地服务，指向lucky主题 下的，admin/server目录

@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background: #fff;
+    color: #747f8c;
+    font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1, h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.page-header {
+    height: 80px;
+    background-color: #B42619;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    .logo {
+        line-height: 80px;
+        text-indent: 50px;
+        font-weight: 700;
+    }
+
+}
+
+.page-container {
+    min-height: 100%;
+    padding-bottom: 80px;
+    background-color: #fbfbfb;
+    position: relative;
+    .main-view {
+        padding-left: 200px;
+    }
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    height: auto;
+    width: 200px;
+    background-color: #F7F7F7;
+    float: left;
+    border-right: 1px solid #dddddd;
+    display: block;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    .main-nav {
+        margin-top: 50px;
+        text-align: center;
+        border-bottom: 1px solid #e7e7e7;
+        ul {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            li {
+                height: 36px;
+                line-height: 36px;
+                font-size: 14px;
+                cursor: pointer;
+                border-bottom: 1px solid #fff;
+                border-top: 1px solid #e7e7e7;
+                a {
+                    display: block;
+                    height: 36px;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &:hover {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    width: 100% !important;
+
+}
+
+.module-header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.table-bc {
+    margin-top: 30px;
+    thead {
+        tr {
+            th {
+                background-color: #efefef;
+                color: #888;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.lucky-alert {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000000;
+    div {
+        text-align: center;
+    }
+}
+
+.add-group-form {
+    padding: 15px 0;
+}
+
+.lotto-group-list {
+    .glyphicon {
+        position: absolute;
+        right: 5px;
+        top: 13px;
+        visibility: hidden;
+    }
+    .glyphicon-edit{
+        right: 30px;
+    }
+    a{
+        cursor: pointer;
+        &:hover{
+            .glyphicon {
+                visibility: visible;
+            }
+        }
+    }
+}
