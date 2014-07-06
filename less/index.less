@@ -19,13 +19,15 @@ li {
 }
 
 a {
-    color: #4f4f4f;
+    color: #428BCA;
     text-decoration: none;
     &:hover {
-        color: #222;
+        color: #2C699E;
     }
 }
-
+.inline{
+    display: inline;
+}
 .clearfix {
     &:before,
     &:after {
@@ -244,34 +246,6 @@ a {
                     }
                 }
             }
-            .balls {
-                li {
-                    float: left;
-                    width: 26px;
-                    height: 44px;
-                    margin-right: 9px;
-                    margin-top: 5px;
-                    span {
-                        font-weight: bold;
-                        font-family: arial;
-                        font-size: 14px;
-                        line-height: 25px;
-                        text-align: center;
-                        background: url('../resource/ball.png') no-repeat 0 0;
-                        display: block;
-                        width: 100%;
-                        height: 30px;
-                        cursor: pointer;
-                    }
-                    em {
-                        font-style: normal;
-                        text-align: center;
-                        width: 100%;
-                        color: #BFBFBF;
-                        display: block;
-                    }
-                }
-            }
             .help {
                 float: left;
                 padding: 8px 0 0 15px;
@@ -296,6 +270,45 @@ a {
     }
 }
 
+.balls {
+    li {
+        float: left;
+        width: 26px;
+        height: 44px;
+        margin-right: 9px;
+        margin-top: 5px;
+        span {
+            font-weight: bold;
+            font-family: arial;
+            font-size: 14px;
+            line-height: 25px;
+            text-align: center;
+            background: url('../resource/ball.png') no-repeat 0 0;
+            display: block;
+            width: 100%;
+            height: 30px;
+            cursor: pointer;
+            &.sfont{
+                font-size: 9px;
+            }
+            &.selected,&.red-ball{
+                color:#fff;
+                background-position: -80px 0 ;
+            }
+            &.blue-ball,&.special{
+                color:#fff;
+                background-position: -40px 0 ;
+            }
+        }
+        em {
+            font-style: normal;
+            text-align: center;
+            width: 100%;
+            color: #BFBFBF;
+            display: block;
+        }
+    }
+}
 .reward {
     border-bottom: 1px solid #E6E6E6;
     margin-bottom: 10px;
@@ -414,19 +427,23 @@ table {
     padding: 20px;
     .selected-list {
         float: left;
+        overflow: auto;
         width: 480px;
         height: 150px;
         padding: 10px;
         border: 1px solid #ddd;
         background-color: #fff;
         margin-right: 10px;
+        li{
+            line-height: 24px;
+        }
         .sp-4 {
             display: inline-block;
             width: 135px;
         }
         .sp-2 {
             display: inline-block;
-            width: 50px
+            width: 40px
         }
     }
     .select-random {
@@ -491,6 +508,9 @@ table {
     &.ipt-s {
         width: 80px;
     }
+    &.ipt-2{
+        width:135px;
+    }
 }
 
 .input-block {
@@ -532,5 +552,171 @@ table {
     line-height: 42px;
     &.tip-error{
         color:#f60
+    }
+}
+.search-wrap{
+    padding:20px;
+    select{
+        width:100px;
+        margin-right: 15px;
+    }
+    .date-range{
+        margin-right: 15px;
+    }
+    .btn{
+        margin-right: 15px;
+    }
+}
+.list-order{
+    padding:20px 0 ;
+}
+.table-1{
+    th{
+        line-height: 32px;
+        border: 1px solid #ddd;
+        background-color: #eee;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    td{
+        line-height: 24px;
+        padding:3px 5px;
+        border:1px solid #ddd;
+        background-color: #fff;
+        text-align: center;
+        &.align-left{
+            text-align: left;
+        }
+        &.align-right{
+            text-align: right;
+        }
+    }
+}
+.pagination{
+    padding:20px;
+    text-align: center;
+    a{
+        display: inline-block;
+        height: 24px;
+        line-height: 24px;
+        padding:0 8px;
+        border:1px solid #ddd;
+        background-color: #eee;
+        margin:0 5px;
+        &:hover{
+            background-color: #ddd;
+        }
+        &.disabled{
+            background-color: #eee;
+            color: #ddd;
+            cursor: default;
+            &:hover{
+                background-color: #eee;
+                color: #ddd;
+            }
+        }
+        &.active{
+            background-color: #428BCA;
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                background-color: #2C699E;
+                color: #fff;
+            }
+        }
+    }
+}
+.order-manager{
+    .breadcrumb{
+        margin: 15px 0;
+        background-color: #ddd;
+        line-height: 28px;
+        padding:0 10px;
+        span{
+            margin:0 5px;
+            color:#888
+        }
+    }
+    .order-status{
+        padding:20px;
+        line-height: 40px;
+        font-size: 20px;
+        strong{
+            font-weight: 700;
+        }
+    }
+    .order-desc{
+        margin-bottom: 20px;
+        background-color: #eee;
+        padding:20px;
+        ul{
+            li{
+                line-height: 28px;
+                float: left;
+                width: 220px;
+            }
+        }
+    }
+}
+.ajh{
+    padding:20px;
+    text-align: center;
+    ul{
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .ajh-desc{
+        font-size: 20px;
+    }
+}
+.my-lotto {
+    padding-top: 10px;
+    h3 {
+        text-indent: 20px;
+        height: 42px;
+        background-color: #eee;
+        line-height: 42px;
+        .sp {
+            color: #888;
+            margin: 0 10px;
+        }
+    }
+    .my-lotto-item {
+        border: 1px solid #ddd;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    .my-lotto-tip{
+        color:#888;
+        line-height: 36px;
+        text-indent: 10px;
+        
+    }
+}
+.table-2{
+    border:none;
+   td{
+       padding:5px;
+       border:none;
+       border-bottom: 1px dashed #ddd;
+       line-height: 28px;
+       &.long{
+           width:350px;
+       }
+   }
+}
+.balls-square{
+    .ball{
+        display: inline-block;
+        border:1px solid #ddd;
+        line-height: 1;
+        padding:5px 10px;
+        font-weight: 700;
+        margin-right: 8px;
+        &.selected{
+            background-color: #cc0000;
+            color:#fff;
+        }
     }
 }
